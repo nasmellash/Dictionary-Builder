@@ -329,4 +329,15 @@ public class GenericLinkedList<T> implements Iterable<T> {
         return data;
     }
 
+    public void increment(T element) {
+        Node current = head;
+        while(current!= null) {
+            if(current.data.equals(element)) {
+                current.count++;
+                return;
+            }
+            current = current.next;
+        }
+    }
+
 }
