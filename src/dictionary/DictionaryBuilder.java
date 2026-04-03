@@ -10,7 +10,9 @@ public class DictionaryBuilder {
 
 
     public DictionaryBuilder(int estimatedEntries) {
-        double tableSize = estimatedEntries / LOAD_FACTOR;
+        int estimatedTableSize = (int) (estimatedEntries / LOAD_FACTOR);
+        int hashTableSize = findClosetGaussianPrime(estimatedTableSize);
+        this.hashTable = new GenericLinkedList[hashTableSize];
 
     }
     public DictionaryBuilder(String filename) {}
@@ -20,7 +22,16 @@ public class DictionaryBuilder {
     public int getFrequency(String word){return 0;}
     public void removeWord(String word){}
 
-    public int findClosetGaussianPrime (int num){
+
+
+
+
+
+
+
+
+
+    public static int findClosetGaussianPrime (int num){
         if(num <= 2) return 2; // Smallest Gaussian Prime
 
         int mod = num % 4;
