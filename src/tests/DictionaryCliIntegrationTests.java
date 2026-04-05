@@ -1,4 +1,5 @@
-package tests; /**
+package tests;
+/**
  * ----------------------------------------------------------------------
  * File: DictionaryCliIntegrationTests.java
  * Author: Montgomery College CMSC204 Staff
@@ -28,6 +29,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.*;
 import java.util.concurrent.*;
 
+import dictionary.*;
+
 public class DictionaryCliIntegrationTests {
 
     private String getLineContaining(String fullOutput, String keyword) {
@@ -41,7 +44,7 @@ public class DictionaryCliIntegrationTests {
 
     private String runCliSession(String fullInput) throws Exception {
         String classpath = System.getProperty("java.class.path");
-        ProcessBuilder pb = new ProcessBuilder("java", "-cp", classpath, "DictionaryShell", "sample_input.txt");
+        ProcessBuilder pb = new ProcessBuilder("java", "-cp", classpath, "dictionary.DictionaryShell", "sample_input.txt");
         pb.redirectErrorStream(true);
         Process process = pb.start();
 
