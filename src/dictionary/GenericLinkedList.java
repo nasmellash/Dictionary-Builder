@@ -346,6 +346,7 @@ public class GenericLinkedList<T> implements Iterable<T> {
             if(current.data.equals(element)) {
                 return current.count;
             }
+            current = current.next;
         }
         return -1;
     }

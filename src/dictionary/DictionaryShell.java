@@ -28,6 +28,10 @@ public class DictionaryShell {
 
         while (!done) {
             System.out.print("> ");
+
+            if(!scan.hasNextLine())
+                break;
+
             line = scan.nextLine();
             String[] command = line.trim().toLowerCase().split(" ");
             switch (command[0]) {

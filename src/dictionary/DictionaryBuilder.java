@@ -11,7 +11,12 @@ public class DictionaryBuilder {
 
 
     public DictionaryBuilder(int estimatedEntries) {
-        int estimatedTableSize = (int) (estimatedEntries / LOAD_FACTOR);
+        int estimatedTableSize;
+        if(estimatedEntries <= 0)
+            estimatedTableSize = (int) (100 / LOAD_FACTOR); // Random default value for CLI test
+        else
+            estimatedTableSize = (int) (estimatedEntries / LOAD_FACTOR);
+
         this.hashTableSize = findClosetGaussianPrime(estimatedTableSize);
         this.hashTable = new GenericLinkedList[hashTableSize];
     }
@@ -125,9 +130,9 @@ public class DictionaryBuilder {
     public String toString() {
         StringBuilder output = new StringBuilder();
         for(int i = 0; i < getAllWords().size(); i++) {
-            output.append("\n").append(getAllWords().get(i));
+            output.append(getAllWords().get(i)).append("\n");
         }
-        return String.valueOf(output);
+        return output.toString();
     }
 
     public static int findClosetGaussianPrime (int num){
