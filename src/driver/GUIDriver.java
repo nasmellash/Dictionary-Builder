@@ -1,3 +1,5 @@
+package driver;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
@@ -40,6 +42,8 @@ import java.io.FileNotFoundException;
  *   - int getFrequency(String word)
  *   - Iterable<String> getAllWords()
  */
+import dictionary.*;
+
 public class GUIDriver extends JFrame {
 
     private DictionaryBuilder dict;

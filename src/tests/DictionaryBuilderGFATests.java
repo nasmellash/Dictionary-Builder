@@ -1,4 +1,4 @@
-/**
+package tests; /**
  * ----------------------------------------------------------------------
  * File: DictionaryBuilderGFATests.java
  * Author: Montgomery College CMSC204 Staff
@@ -25,6 +25,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import dictionary.*;
 
 /**
  * Good Faith Attempt (GFA) tests for DictionaryBuilder.

@@ -340,4 +340,14 @@ public class GenericLinkedList<T> implements Iterable<T> {
         }
     }
 
+    public int getCount(T element) {
+        Node current = head;
+        while(current!=null) {
+            if(current.data.equals(element)) {
+                return current.count;
+            }
+        }
+        return -1;
+    }
+
 }

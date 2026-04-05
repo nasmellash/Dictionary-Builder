@@ -1,4 +1,4 @@
-/**
+package tests; /**
  * ----------------------------------------------------------------------
  * File: DictionaryBuilderPublicTests.java
  * Author: Montgomery College CMSC204 Staff
@@ -27,7 +27,7 @@ import org.junit.jupiter.api.Test;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
-
+import dictionary.*;
 /**
  * Full functional test suite for DictionaryBuilder.
  * Covers all required public methods.

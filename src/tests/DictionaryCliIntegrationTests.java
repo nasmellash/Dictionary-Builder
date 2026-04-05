@@ -1,4 +1,4 @@
-/**
+package tests; /**
  * ----------------------------------------------------------------------
  * File: DictionaryCliIntegrationTests.java
  * Author: Montgomery College CMSC204 Staff
@@ -27,6 +27,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.*;
 import java.util.concurrent.*;
+import dictionary.*;
 
 public class DictionaryCliIntegrationTests {
 
