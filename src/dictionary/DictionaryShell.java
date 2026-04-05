@@ -57,7 +57,7 @@ public class DictionaryShell {
                     if(dictionary.getAllWords().isEmpty())
                         System.out.println("No words found.");
                     else
-                        System.out.println(dictionary.getAllWords());
+                        System.out.println(dictionary.toString());
                     break;
                 case "stats":
                     System.out.println("Total words: " +  dictionary.getTotalWords());
