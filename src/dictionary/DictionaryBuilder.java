@@ -78,7 +78,9 @@ public class DictionaryBuilder {
             return 0;
     }
 
-    public double getLoadFactor() { return LOAD_FACTOR; }
+    public double getLoadFactor() {
+        return (double) getUniqueWords() / hashTableSize;
+    }
 
     public int getTotalWords() {
         int totalWords = 0;

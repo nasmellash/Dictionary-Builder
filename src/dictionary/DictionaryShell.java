@@ -46,21 +46,18 @@ public class DictionaryShell {
                     }
                     break;
                 case "search":
-                    boolean found;
-                    try {
-                        found = dictionary.searchWord(command[1]);
-                        if(!found) {
-                            throw new DictionaryEntryNotFoundException(command[1] + " not found.");
-                        }
-                    } catch (DictionaryEntryNotFoundException e) {
-                        System.out.println(e.getMessage());
+                    boolean found = dictionary.searchWord(command[1]);
+                    if(!found) {
+                        System.out.println(command[1] + " not found.");
+                    } else {
+                        System.out.println(command[1] + " found. Frequency: " + dictionary.getFrequency(command[1]));
                     }
                     break;
                 case "list":
                     if(dictionary.getAllWords().isEmpty())
                         System.out.println("No words found.");
                     else
-                        System.out.print(dictionary.getAllWords());
+                        System.out.println(dictionary.getAllWords());
                     break;
                 case "stats":
                     System.out.println("Total words: " +  dictionary.getTotalWords());
@@ -68,7 +65,7 @@ public class DictionaryShell {
                     System.out.println("Estimated load factor: " + dictionary.getLoadFactor());
                     break;
                 case "exit":
-                    System.out.print("Quitting...");
+                    System.out.println("Quitting...");
                     scan.close();
                     done = true;
                     break;
