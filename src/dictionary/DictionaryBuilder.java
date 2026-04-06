@@ -5,7 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.*;
 
 /**
- *
+ * Implements a dictionary using a hash table with separate chaining.
+ * The class sanitizes the words (by removing any character that is not a-z),
+ * and stores an accompanying frequency counter.
+ * The hash table size is determined using algorithm provided in instructions.
  */
 public class DictionaryBuilder {
     private static final double LOAD_FACTOR = 0.6;

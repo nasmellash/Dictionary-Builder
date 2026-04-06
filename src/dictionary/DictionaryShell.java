@@ -4,7 +4,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
- *
+ * A command-line interface class built to interact with the DictionaryBuilder class.
+ * Accepts (if provided) a filename as initial command-line argument to load a dictionary.
+ * Also supports additional features such as search, add, delete, list, stats, and exit (to
+ * terminate program).
  */
 public class DictionaryShell {
     public static void main (String[] args) {
