@@ -47,10 +47,13 @@ public class DictionaryShell {
                     } else {
                         dictionary.addWord(command[1]);
                     }
+                    System.out.println("\"" + command[1] + "\" added.");
                     break;
                 case "delete":
                     try {
                         dictionary.removeWord(command[1]);
+                        System.out.println("\"" + command[1] + "\" deleted.");
+
                     } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
@@ -60,7 +63,7 @@ public class DictionaryShell {
                     if(!found) {
                         System.out.println(command[1] + " not found.");
                     } else {
-                        System.out.println(command[1] + " found. Frequency: " + dictionary.getFrequency(command[1]));
+                        System.out.println(dictionary.getFrequency(command[1]) + " instances(s) of " + "\"" + command[1] + "\" found.");
                     }
                     break;
                 case "list":
