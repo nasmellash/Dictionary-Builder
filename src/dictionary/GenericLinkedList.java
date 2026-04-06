@@ -86,7 +86,8 @@ public class GenericLinkedList<T> implements Iterable<T> {
 
     /**
      * An inner class representing a single node.
-     * Each node stores data and references to the next and previous node.
+     * Each node stores data, references to the next and previous node,
+     * and the frequency of that data being stored.
      */
     private class Node {
         T data;
@@ -329,6 +330,12 @@ public class GenericLinkedList<T> implements Iterable<T> {
         return data;
     }
 
+    /**
+     * Checks if element passed occurs in the bucket by traversing
+     * and comparing using the equals' method.
+     * If it does, it increments the count in its respective node.
+     * @param element the element being incremented
+     */
     public void increment(T element) {
         Node current = head;
         while(current!= null) {
@@ -340,6 +347,14 @@ public class GenericLinkedList<T> implements Iterable<T> {
         }
     }
 
+    /**
+     * Gets the count data field of the element passed by traversing
+     * and comparing using the equals' method.
+     * If the element occurs in the bucket, return its count.
+     * If not, return -1 to signal element not present in bucket.
+     * @param element the element's count being retrieved
+     * @return the count of the element
+     */
     public int getCount(T element) {
         Node current = head;
         while(current!=null) {

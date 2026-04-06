@@ -3,6 +3,9 @@ package dictionary;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
+/**
+ *
+ */
 public class DictionaryShell {
     public static void main (String[] args) {
         System.out.println("Welcome to the Dictionary Builder CLI.");
